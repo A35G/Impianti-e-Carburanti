@@ -1,0 +1,17 @@
+<ifModule mod_headers.c>
+Header set Access-Control-Allow-Origin "*"
+Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+</ifModule>
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteRule ^public/ - [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ index.php?section=$1 [L,QSA]
+RewriteRule ^([^/]+)/([^/]+)$ index.php?section=$1&subs=$2 [L,QSA]
