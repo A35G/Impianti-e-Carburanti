@@ -28,3 +28,32 @@ Download dei File suddivisi per Tipologia:
 
 	- prezzi
  	Per ottenere il file contenente i prezzi praticati all'interno delle Stazioni di Servizio suddivisi per tipo di carburante e servizio
+
+- `/checkForDataImport/{tipologia}`
+
+Elaborazione dei file in formato csv scaricati dal Portale del Ministero
+
+- `/elaborateManualImport/{tipologia}`
+
+Elaborazione dei file contenuti all'interno della cartella ***import*** in caso di upload manuale
+
+- `/datalist`
+
+Elenco delle Stazioni di Rifornimento Carburante e loro informazioni, Tipologie di Carburante fornito e Prezzi applicati.
+
+- `cleanhistory`
+
+Pulizia dello Storico Import ed Elaborazioni
+
+# Da implementare
+
+  -	[ ] Gestione Anomalie durante il parsing dei file; - *Devs*
+  -	[ ] Utilizzo di campi JSON all'interno del Database;
+  -	[ ] Implementazione di endpoint per ricerca e filtri;
+  -	[ ] Ottimizzazione del codice.
+
+---
+> [!NOTE]
+> Il codice all'interno del progetto, è molto grezzo (è vero - ndr -) ma è un abbozzo di qualcosa che potrebbe essere utile (?) prima o poi.
+> 
+> Qualsiasi suggerimento, commento, critica o avviso, è ben accetto.
