@@ -17,6 +17,8 @@ Anche se in fase di sviluppo, l'Ambiente è già funzionante e può essere imple
 
 - Modifica le impostazioni all'interno del file **Config.php**
 
+- Imposta i giusti permessi di lettura/scrittura alle cartelle e sotto-cartelle in "**public**" (archive, import, logs)
+
 # Endpoint
 
 - `/download/{tipologia}`
@@ -29,7 +31,7 @@ Download dei File suddivisi per Tipologia:
 	- prezzi
  	Per ottenere il file contenente i prezzi praticati all'interno delle Stazioni di Servizio suddivisi per tipo di carburante e servizio
 
-- `/checkForDataImport/{tipologia}`
+- `/parse/{tipologia}`
 
 Elaborazione dei file in formato csv scaricati dal Portale del Ministero
 
