@@ -99,3 +99,16 @@ $config["rmvdays"] = 7;
  * 
  */
 $config["forpage"] = 20;
+
+/**
+ * Export and Report file type
+ * ---------------------------
+ *
+ * Formato del file in cui si 
+ * desidera salvare le anomalie
+ * riscontrate durante l'elabo-
+ * razione dei file forniti dal
+ * Ministero
+ *
+ */
+$config["reportfile"] = "excel";
